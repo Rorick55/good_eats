@@ -25,7 +25,7 @@ feature "User adds a new restaurant", %Q{
     fill_in 'State', with: restaurant.state
     fill_in 'Zip code', with: restaurant.zip_code
     fill_in 'Description', with: restaurant.description
-    fill_in 'category', with: restaurant.category
+    fill_in 'Category', with: restaurant.category
     click_on 'Submit'
 
     expect(page).to have_content 'Success'
