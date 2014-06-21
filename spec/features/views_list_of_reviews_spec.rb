@@ -24,7 +24,8 @@ feature 'User views all reviews for a restaurant', %Q{
     review_attrs.each do |attrs|
       review = Review.new(attrs)
       review.restaurant_id = restaurant.id
-      reviews << Review.save(attrs)
+      review.save(attrs)
+      reviews << review
     end
 
     visit "/restaurants/#{restaurant.id}"
