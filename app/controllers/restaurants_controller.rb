@@ -18,7 +18,7 @@ class RestaurantsController < ApplicationController
         flash[:notice] = "Success! You added #{@restaurant.name}"
         redirect_to @restaurant
       else
-        render new_restaurant
+        render "restaurants/new"
       end
   end
 

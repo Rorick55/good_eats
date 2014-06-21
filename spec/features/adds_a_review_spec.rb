@@ -24,8 +24,8 @@ feature 'User adds a review to a restaurant', %Q{
     review = Review.new(attrs)
 
     visit "restaurants/#{restaurant.id}/reviews/new"
-    fill_in 'Rating', with: review.rating
-    fill_in 'Body', with: review.body
+    select review.rating, from: 'Rating'
+    fill_in 'Review', with: review.body
     click_on 'Submit'
 
     expect(page).to have_content review.rating
