@@ -19,7 +19,7 @@ require 'spec_helper'
       visit '/restaurants'
       restaurants.each do |restaurant|
       expect(page).to have_content restaurant.name
-      expect(page).to have_content restaurant.address
+      expect(page).to have_content restaurant.city
     end
   end
 end
