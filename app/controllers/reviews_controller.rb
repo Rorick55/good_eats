@@ -13,10 +13,8 @@ class ReviewsController < ApplicationController
         flash[:notice] = 'Success! You added a review!'
         redirect_to @restaurant
       else
-        render new_restaurant_review_path
+        render :template => 'reviews/new'
       end
-  end
-
   end
 
 
