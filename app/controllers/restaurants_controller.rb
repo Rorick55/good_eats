@@ -1,7 +1,7 @@
 class RestaurantsController < ApplicationController
 
   def index
-    @restaurants = Restaurant.order('created_at DESC')
+    @restaurants = Restaurant.order('created_at DESC').limit('10')
   end
 
   def show
