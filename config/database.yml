@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: good_eats_production
-  username: good_eats
-  password: <%= ENV['GOOD_EATS_DATABASE_PASSWORD'] %>
+  username:
+  password:

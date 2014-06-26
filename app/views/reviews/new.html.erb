@@ -1,0 +1,18 @@
+<h2>Add a Review for <%= @restaurant.name %></h2>
+
+
+<% if @review.errors.any? %>
+  <ul>
+    <% @review.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+      <%end%>
+  </ul>
+<%end%>
+
+<%= form_for [@restaurant, @review] do |f| %>
+  <%= f.label :rating %>
+  <%= f.select :rating, [1, 2, 3, 4, 5] %>
+  <%= f.label :body, 'Review' %>
+  <%= f.text_area :body %>
+  <%= f.submit 'Submit' %>
+<%end%>
